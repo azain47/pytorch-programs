@@ -16,7 +16,7 @@ my = Y.mean()
 sy = Y.std()
 
 X = (X-mx)/sx
-Y = (Y-my)/sy
+#Y = (Y-my)/sy
 plt.scatter(X,Y)
 plt.show()
 
@@ -28,9 +28,9 @@ model = nn.Linear(1,1)
 
 criterion = nn.MSELoss()
 
-optimizer = torch.optim.SGD(model.parameters(),lr = 0.3,momentum=0.7)
+optimizer = torch.optim.SGD(model.parameters(),lr = 0.003,momentum=0.7)
 
-epochs = 150
+epochs = 450
 
 losses = []
 for i in range(epochs):
